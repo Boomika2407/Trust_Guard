@@ -269,7 +269,12 @@ with tab_model:
              ("XGBoost built-in importance", "feature_importance_xgb.png"),
              ("SHAP dependence (v14, v4)", "shap_dependence.png"),
              ("Waterfall: fraud case", "shap_waterfall_fraud.png"),
-             ("Waterfall: legitimate case", "shap_waterfall_legit.png")]
+             ("Waterfall: legitimate case", "shap_waterfall_legit.png"),
+             ("Class distribution (legitimate vs fraud)", "class_distribution.png"),
+             ("Transaction amount by class (log scale)", "amount_by_class.png"),
+             ("Fraud rate (%) by hour", "fraud_rate_by_hour.png"),
+             ("Feature correlation with fraud class", "feature_correlation.png"),
+             ("Precision and recall vs decision threshold (XGBoost)", "precision_recall_threshold.png")]
     available = [(t, config.PLOTS_DIR / f) for t, f in plots if (config.PLOTS_DIR / f).exists()]
     for i in range(0, len(available), 2):
         cols = st.columns(2)
